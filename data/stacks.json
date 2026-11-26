@@ -325,7 +325,16 @@
         "lines": [
           "Looking good shouldn't be something you only do for six weeks of the year."
         ]
-      }
+      },
+      "photos": [
+        {
+          "before": "images/lean/before-1.jpg",
+          "after": "images/lean/after-1.jpg",
+          "caption": "",
+          "beforeLabel": "Bulked",
+          "afterLabel": "Lean"
+        }
+      ]
     },
     {
       "slug": "primal",
