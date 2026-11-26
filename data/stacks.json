@@ -10,7 +10,8 @@
     "COPY: 'body' and 'story' can be one string or a list of paragraphs. 'lead' is a short line under the name. A stack can have 'outro': {title, lines[], fine} shown under the cards. A section 'title' can be empty.",
     "PHOTOS: a stack can have 'photos': a list of {before, after, caption, beforeLabel, afterLabel}. A pair only shows if both image files exist. For hair, drop files into images/hair/ named before-1.jpg, after-1.jpg, before-2.jpg, after-2.jpg.",
     "PHOTO PINS: each photo pair can have 'beforePin' and 'afterPin': {x, y, text}. x and y are percentages across and down the photo where the marker points. Change 'text' to relabel it.",
-    "CARD PHOTO: an info item can have 'photo': {before, after, beforeLabel, afterLabel, beforePin, afterPin}. It shows inside that card, above the text."
+    "CARD PHOTO: an info item can have 'photo': {before, after, beforeLabel, afterLabel, beforePin, afterPin}. It shows inside that card, above the text.",
+    "CARD ICON: an info item can have 'icon': pill, drop, bottle, stamp, syringe, vial, spray, jar, sun, shield, tube, sparkle, flame. Shown in a blue tile beside the name."
   ],
   "config": {
     "trackEndpoint": "",
@@ -49,7 +50,8 @@
               "status": "prescription",
               "body": "Blocks DHT, the hormone behind male pattern hair loss. Used to stop the hairline going back. Oral or topical.",
               "story": "",
-              "provider": true
+              "provider": true,
+              "icon": "pill"
             },
             {
               "type": "info",
@@ -57,7 +59,8 @@
               "status": "prescription",
               "body": "A stronger DHT blocker. The step up when finasteride isn't enough.",
               "story": "",
-              "provider": true
+              "provider": true,
+              "icon": "pill"
             }
           ]
         },
@@ -70,7 +73,8 @@
               "status": "established",
               "body": "Topical foam or liquid, used to regrow and thicken hair.",
               "story": "",
-              "link": ""
+              "link": "",
+              "icon": "drop"
             },
             {
               "type": "info",
@@ -78,7 +82,8 @@
               "status": "established",
               "body": "Anti-dandruff shampoo, used alongside the rest for scalp health and hair.",
               "story": "",
-              "link": ""
+              "link": "",
+              "icon": "bottle"
             },
             {
               "type": "info",
@@ -86,7 +91,8 @@
               "status": "established",
               "body": "Used with minoxidil to push regrowth further.",
               "story": "",
-              "link": ""
+              "link": "",
+              "icon": "stamp"
             },
             {
               "type": "info",
@@ -94,14 +100,16 @@
               "status": "cosmetic",
               "body": "Copper peptide serum for the scalp, used for hair thickness.",
               "story": "",
-              "link": ""
+              "link": "",
+              "icon": "drop"
             },
             {
               "type": "info",
               "name": "GHK-Cu, injectable",
               "status": "experimental",
               "body": "Copper peptide, used for hair and skin quality.",
-              "story": ""
+              "story": "",
+              "icon": "syringe"
             }
           ]
         },
@@ -114,14 +122,16 @@
               "name": "Sea Salt Spray",
               "lead": "Coming soon",
               "body": "",
-              "story": ""
+              "story": "",
+              "icon": "spray"
             },
             {
               "type": "info",
               "name": "Matte Clay",
               "lead": "Coming soon",
               "body": "",
-              "story": ""
+              "story": "",
+              "icon": "jar"
             }
           ]
         }
@@ -177,7 +187,8 @@
                 "GHK-Cu is always in my stack. It's a no-brainer for me.",
                 "I run it for collagen and to keep my skin and hair dialled in."
               ],
-              "status": "experimental"
+              "status": "experimental",
+              "icon": "syringe"
             },
             {
               "type": "info",
@@ -187,7 +198,8 @@
                 "Melanotan II is always in my stack. It keeps me tan year-round with barely any sun.",
                 "With my blonde hair, that contrast is critical. Being tan and lean is the single biggest looksmax for me."
               ],
-              "status": "experimental"
+              "status": "experimental",
+              "icon": "sun"
             },
             {
               "type": "info",
@@ -197,23 +209,19 @@
                 "I've tried a ton of things for my acne over the years. Cleansers, creams, treatments, all of it.",
                 "Nothing cleared my skin up as much as KPV, and nothing else has kept it away like this."
               ],
-              "status": "experimental"
-            }
-          ]
-        },
-        {
-          "title": "Anti-Aging",
-          "note": "The goal isn't just to look good now. It's to look good ten years from now.",
-          "items": [
+              "status": "experimental",
+              "icon": "shield"
+            },
             {
               "type": "info",
               "name": "Adapalene 0.1%",
               "body": [
-                "Adapalene is one of the more established options for managing acne and improving skin texture over time. Nothing flashy, just a legitimate skincare ingredient that doesn't need some ridiculous marketing gimmick."
+                "An obvious one to keep in. It keeps my skin clear and helps with anti-aging."
               ],
               "story": "",
               "status": "established",
-              "link": ""
+              "link": "",
+              "icon": "tube"
             }
           ]
         },
@@ -230,7 +238,8 @@
               ],
               "story": "",
               "status": "cosmetic",
-              "link": ""
+              "link": "",
+              "icon": "sparkle"
             }
           ]
         }
@@ -281,7 +290,8 @@
               "body": [
                 "One of the biggest challenges for me when staying lean has always been the constant food noise. Thinking about your next meal 24/7 gets exhausting pretty fucking quickly.",
                 "Retatrutide is something I've personally experimented with throughout my transformation while working toward a leaner physique."
-              ]
+              ],
+              "icon": "flame"
             },
             {
               "type": "info",
@@ -292,7 +302,8 @@
               "body": [
                 "I'm not interested in spending half the year bulking and the other half suffering through an aggressive cut.",
                 "I've explored tirzepatide as part of my approach to appetite management."
-              ]
+              ],
+              "icon": "syringe"
             },
             {
               "type": "info",
@@ -303,7 +314,8 @@
               "body": [
                 "Tesamorelin is a little different from the other compounds in this stack. Rather than suppressing appetite, it stimulates your body's natural growth hormone production.",
                 "I've experimented with it alongside retatrutide or tirzepatide because they work through different pathways. My goal has always been to get lean while maintaining as much muscle as possible."
-              ]
+              ],
+              "icon": "vial"
             }
           ]
         }
@@ -346,7 +358,8 @@
               "story": [
                 "For me, the biggest difference has been confidence. I've had nights where I haven't performed the way I wanted to, and that shit is frustrating.",
                 "Being able to get out of my own head, enjoy the moment and focus on the woman I'm with makes a massive difference to my experience."
-              ]
+              ],
+              "icon": "pill"
             },
             {
               "type": "info",
@@ -357,7 +370,8 @@
                 "There's a difference between being physically ready and genuinely wanting to rip each other's clothes off.",
                 "That's what makes the subject of libido so interesting to me. It's an entirely different conversation from erection quality, and something most guys rarely discuss openly."
               ],
-              "story": ""
+              "story": "",
+              "icon": "flame"
             }
           ]
         }

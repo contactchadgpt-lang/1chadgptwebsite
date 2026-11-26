@@ -94,7 +94,7 @@
   function infoCard(p, stack) {
     var canShop = p.link && (p.status === 'established' || p.status === 'cosmetic');
     return h('article', { class: 'icard' }, [
-      h('h4', { class: 'D', text: p.name }),
+      h('div', { class: 'icard__head' }, [cardIcon(p.icon), h('h4', { class: 'D', text: p.name })]),
       p.lead ? h('p', { class: 'icard__lead mono ac', text: p.lead }) : null,
       p.photo ? photoFig(p.photo) : null
     ].concat(paras(p.body)).concat(paras(p.story)).concat([
@@ -125,6 +125,29 @@
       im.addEventListener('error', function () { if (fig.parentNode) fig.parentNode.removeChild(fig); });
     });
     return fig;
+  }
+
+  /* line icons for product cards (24x24, stroke only) */
+  var CARD_ICONS = {
+    pill: '<path d="M10.5 20.5a5 5 0 0 1-7-7l9-9a5 5 0 0 1 7 7z"/><path d="M8.5 8.5l7 7"/>',
+    drop: '<path d="M12 3c3.5 4.2 6 7.3 6 10.5a6 6 0 0 1-12 0C6 10.3 8.5 7.2 12 3z"/><path d="M9.5 14a2.5 2.5 0 0 0 2.5 2.5"/>',
+    bottle: '<path d="M9 3h6v3l2 3v11a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1V9l2-3z"/><path d="M7 13h10"/>',
+    stamp: '<rect x="5" y="4" width="14" height="7" rx="2"/><path d="M12 4V2M8 11v4M12 11v7M16 11v4"/>',
+    syringe: '<path d="M18 2l4 4M20 4l-3 3M14 4l6 6M15.5 5.5 6 15v3h3l9.5-9.5M6 18l-3.5 3.5M10 9l2 2M8 11l2 2"/>',
+    vial: '<path d="M8 3h8M9 3v4.5L7 10v10a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V10l-2-2.5V3"/><path d="M7 15h10"/>',
+    spray: '<path d="M9 9h6v11a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1z"/><path d="M10 9V6h4v3M14 6h3M20 4v.01M21.5 6.5v.01M20 9v.01"/>',
+    jar: '<path d="M6 8h12v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2z"/><path d="M5 4h14v4H5z"/>',
+    sun: '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>',
+    shield: '<path d="M12 3l8 3v6c0 4.5-3.2 7.8-8 9-4.8-1.2-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/>',
+    tube: '<path d="M8 3h8l-1 14H9z"/><path d="M9 17v3.5h6V17M10 8h4"/>',
+    sparkle: '<path d="M11 3l1.8 5.2L18 10l-5.2 1.8L11 17l-1.8-5.2L4 10l5.2-1.8z"/><path d="M19 15v4M17 17h4"/>',
+    flame: '<path d="M12 3c1 3.5 5 5.5 5 10a5 5 0 0 1-10 0c0-1.8.7-3 1.8-4.2C9.800 10 11.200 7.500 12 3z"/><path d="M12 14c.8 1 1.500 1.600 1.500 2.800a1.500 1.500 0 0 1-3 0c0-.9.600-1.700 1.500-2.800z"/>'
+  };
+  function cardIcon(key) {
+    if (!key || !CARD_ICONS[key]) return null;
+    var el = h('span', { class: 'icard__ico', 'aria-hidden': 'true' });
+    el.innerHTML = '<svg viewBox="0 0 24 24">' + CARD_ICONS[key] + '</svg>';
+    return el;
   }
 
   function ghost(p) {
