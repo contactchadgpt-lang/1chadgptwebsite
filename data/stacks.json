@@ -48,7 +48,10 @@
               "type": "info",
               "name": "Finasteride",
               "status": "prescription",
-              "body": "Blocks DHT, the hormone behind male pattern hair loss. Used to stop the hairline going back. Oral or topical.",
+              "body": [
+                "This is where I started, and it's the first thing I'd tell any guy to get on. It blocks DHT, the hormone behind hair loss.",
+                "I've since moved to dutasteride because I'm not risking any loss. But start here."
+              ],
               "story": "",
               "provider": true,
               "icon": "pill"
@@ -57,7 +60,10 @@
               "type": "info",
               "name": "Dutasteride",
               "status": "prescription",
-              "body": "A stronger DHT blocker. The step up when finasteride isn't enough.",
+              "body": [
+                "The stronger DHT blocker, and what I run now.",
+                "I moved up from finasteride because I'm not willing to gamble with my hairline."
+              ],
               "story": "",
               "provider": true,
               "icon": "pill"
@@ -71,7 +77,10 @@
               "type": "info",
               "name": "Minoxidil 5%",
               "status": "established",
-              "body": "Topical foam or liquid, used to regrow and thicken hair.",
+              "body": [
+                "Minoxidil is key. It's the regrowth half of my routine and I don't skip it.",
+                "I've also used it to grow thicker eyebrows and a fuller beard."
+              ],
               "story": "",
               "link": "",
               "icon": "drop"
@@ -80,7 +89,9 @@
               "type": "info",
               "name": "Ketoconazole shampoo",
               "status": "established",
-              "body": "Anti-dandruff shampoo, used alongside the rest for scalp health and hair.",
+              "body": [
+                "My shampoo for scalp health. Cheap, easy, and it stays in the routine."
+              ],
               "story": "",
               "link": "",
               "icon": "bottle"
@@ -89,7 +100,9 @@
               "type": "info",
               "name": "Derma stamp (microneedling)",
               "status": "established",
-              "body": "Used with minoxidil to push regrowth further.",
+              "body": [
+                "I pair this with minoxidil to push regrowth further."
+              ],
               "story": "",
               "link": "",
               "icon": "stamp"
@@ -98,7 +111,9 @@
               "type": "info",
               "name": "GHK-Cu copper peptide serum",
               "status": "cosmetic",
-              "body": "Copper peptide serum for the scalp, used for hair thickness.",
+              "body": [
+                "Copper peptide straight on the scalp. I use it for thickness."
+              ],
               "story": "",
               "link": "",
               "icon": "drop"
@@ -107,7 +122,9 @@
               "type": "info",
               "name": "GHK-Cu, injectable",
               "status": "experimental",
-              "body": "Copper peptide, used for hair and skin quality.",
+              "body": [
+                "Always in my stack. I run it for my hair and my skin."
+              ],
               "story": "",
               "icon": "syringe"
             }
