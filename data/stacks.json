@@ -197,13 +197,7 @@
                 "Nothing cleared my skin up as much as KPV, and nothing else has kept it away like this.",
                 "It's still an experimental peptide, so take this as my experience, not a promise."
               ],
-              "status": "experimental",
-              "photo": {
-                "before": "images/skin/before-1.jpg",
-                "after": "images/skin/after-1.jpg",
-                "beforeLabel": "Before",
-                "afterLabel": "Now"
-              }
+              "status": "experimental"
             }
           ]
         },
@@ -246,7 +240,16 @@
         "lines": [
           "Your face is the first thing people see. Give it the same attention you give your physique."
         ]
-      }
+      },
+      "photos": [
+        {
+          "before": "images/skin/before-1.jpg",
+          "after": "images/skin/after-1.jpg",
+          "caption": "",
+          "beforeLabel": "Before",
+          "afterLabel": "Now"
+        }
+      ]
     },
     {
       "slug": "lean-mean",
