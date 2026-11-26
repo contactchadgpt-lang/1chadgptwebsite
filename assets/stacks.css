@@ -364,3 +364,7 @@ a.tile .tile__ico svg { width: 22px; height: 22px; }
 @keyframes pinpulse { 0% { box-shadow: 0 0 0 0 rgba(255,255,255,.55), 0 0 0 1px rgba(0,0,0,.5); } 100% { box-shadow: 0 0 0 12px rgba(255,255,255,0), 0 0 0 1px rgba(0,0,0,.5); } }
 @media (prefers-reduced-motion: reduce) { .pin::before { animation: none; } }
 @media (max-width: 520px) { .mini__pair .pin b { font-size: .5rem; padding: 6px 7px; letter-spacing: .06em; } .pin::after { top: 26px; } }
+
+/* before and after pair inside a card */
+.icard .mini { margin: 4px 0 6px; }
+.icard .mini__pair > div:first-child img { filter: none; }

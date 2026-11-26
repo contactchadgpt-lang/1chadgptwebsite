@@ -9,7 +9,8 @@
     "config.trackEndpoint: optional URL that receives every affiliate click as JSON. Clicks are also sent to Google Analytics or Plausible if either is installed on the page.",
     "COPY: 'body' and 'story' can be one string or a list of paragraphs. 'lead' is a short line under the name. A stack can have 'outro': {title, lines[], fine} shown under the cards. A section 'title' can be empty.",
     "PHOTOS: a stack can have 'photos': a list of {before, after, caption, beforeLabel, afterLabel}. A pair only shows if both image files exist. For hair, drop files into images/hair/ named before-1.jpg, after-1.jpg, before-2.jpg, after-2.jpg.",
-    "PHOTO PINS: each photo pair can have 'beforePin' and 'afterPin': {x, y, text}. x and y are percentages across and down the photo where the marker points. Change 'text' to relabel it."
+    "PHOTO PINS: each photo pair can have 'beforePin' and 'afterPin': {x, y, text}. x and y are percentages across and down the photo where the marker points. Change 'text' to relabel it.",
+    "CARD PHOTO: an info item can have 'photo': {before, after, beforeLabel, afterLabel, beforePin, afterPin}. It shows inside that card, above the text."
   ],
   "config": {
     "trackEndpoint": "",
@@ -187,15 +188,19 @@
             {
               "type": "info",
               "name": "KPV",
-              "body": [
-                "Redness, irritation and inflammation can make your complexion look significantly worse."
-              ],
+              "body": [],
               "story": [
                 "I've tried a ton of things for my acne over the years. Cleansers, creams, treatments, all of it.",
                 "Nothing cleared my skin up as much as KPV, and nothing else has kept it away like this.",
                 "It's still an experimental peptide, so take this as my experience, not a promise."
               ],
-              "status": "experimental"
+              "status": "experimental",
+              "photo": {
+                "before": "images/skin/before-1.jpg",
+                "after": "images/skin/after-1.jpg",
+                "beforeLabel": "Before",
+                "afterLabel": "Now"
+              }
             }
           ]
         },

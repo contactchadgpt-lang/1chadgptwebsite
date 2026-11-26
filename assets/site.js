@@ -95,7 +95,8 @@
     var canShop = p.link && (p.status === 'established' || p.status === 'cosmetic');
     return h('article', { class: 'icard' }, [
       h('h4', { class: 'D', text: p.name }),
-      p.lead ? h('p', { class: 'icard__lead mono ac', text: p.lead }) : null
+      p.lead ? h('p', { class: 'icard__lead mono ac', text: p.lead }) : null,
+      p.photo ? photoFig(p.photo) : null
     ].concat(paras(p.body)).concat([
       has(p.story) ? h('div', { class: 'icard__story' }, [h('span', { class: 'mono', text: 'My personal experience' })].concat(paras(p.story))) : null,
       (p.status === 'prescription' && cfg.providerLink) ? h('a', { href: cfg.providerLink, target: '_blank', rel: 'noopener', class: 'ulink', text: 'Get it through a licensed provider →' }) : null,
@@ -110,6 +111,21 @@
   function pin(p, on) {
     if (!p || !p.text) return null;
     return h('i', { class: 'pin' + (on ? ' pin--on' : ''), style: 'left:' + p.x + '%;height:' + p.y + '%' }, [h('b', { class: 'mono', text: p.text })]);
+  }
+
+  /* a before and after pair; removes itself if either image is missing */
+  function photoFig(ph) {
+    var fig = h('figure', { class: 'mini' }, [
+      h('div', { class: 'mini__pair' }, [
+        h('div', {}, [h('img', { src: ROOT + ph.before, alt: 'Chad, ' + (ph.beforeLabel || 'before'), loading: 'lazy' }), h('span', { class: 'mono', text: ph.beforeLabel || 'Before' }), pin(ph.beforePin, false)]),
+        h('div', {}, [h('img', { src: ROOT + ph.after, alt: 'Chad, ' + (ph.afterLabel || 'now'), loading: 'lazy' }), h('span', { class: 'mono on', text: ph.afterLabel || 'Now' }), pin(ph.afterPin, true)])
+      ]),
+      ph.caption ? h('figcaption', {}, [h('span', { text: ph.caption })]) : null
+    ]);
+    Array.prototype.forEach.call(fig.querySelectorAll('img'), function (im) {
+      im.addEventListener('error', function () { if (fig.parentNode) fig.parentNode.removeChild(fig); });
+    });
+    return fig;
   }
 
   function ghost(p) {
@@ -147,24 +163,7 @@
       $('tagline').textContent = s.sub;
       s.intro.forEach(function (t) { $('intro').appendChild(h('p', { text: t })); });
 
-      (s.photos || []).forEach(function (ph) {
-        var fig = h('figure', { class: 'mini' }, [
-          h('div', { class: 'mini__pair' }, [
-            h('div', {}, [h('img', { src: ROOT + ph.before, alt: 'Chad, ' + (ph.beforeLabel || 'before'), loading: 'lazy' }), h('span', { class: 'mono', text: ph.beforeLabel || 'Before' }), pin(ph.beforePin, false)]),
-            h('div', {}, [h('img', { src: ROOT + ph.after, alt: 'Chad, ' + (ph.afterLabel || 'now'), loading: 'lazy' }), h('span', { class: 'mono on', text: ph.afterLabel || 'Now' }), pin(ph.afterPin, true)])
-          ]),
-          ph.caption ? h('figcaption', {}, [h('span', { text: ph.caption })]) : null
-        ]);
-        var gone = false;
-        Array.prototype.forEach.call(fig.querySelectorAll('img'), function (im) {
-          im.addEventListener('error', function () {
-            if (gone) return; gone = true;
-            if (DRAFT) fig.parentNode.replaceChild(h('div', { class: 'ghost' }, [h('span', { class: 'mono', text: 'Draft · photos to add' }), h('b', { text: ph.before + ' + ' + ph.after })]), fig);
-            else fig.parentNode.removeChild(fig);
-          });
-        });
-        $('photos').appendChild(fig);
-      });
+      (s.photos || []).forEach(function (ph) { $('photos').appendChild(photoFig(ph)); });
 
       var out = $('sections'), shown = 0;
       s.sections.forEach(function (sec) {
