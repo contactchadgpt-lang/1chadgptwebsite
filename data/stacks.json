@@ -49,7 +49,8 @@
               "name": "Finasteride",
               "status": "prescription",
               "body": [
-                "This is where I started, and it's the first thing I'd tell any guy to get on. It blocks DHT, the hormone behind hair loss.",
+                "This is where I started, and it's the first thing I'd tell any guy to get on. It blocks DHT, the hormone that shrinks your follicles.",
+                "A daily pill, through a doctor. It only works for as long as you stay on it, so treat it as a long-term commitment.",
                 "I've since moved to dutasteride because I'm not risking any loss. But start here."
               ],
               "story": "",
@@ -62,7 +63,8 @@
               "status": "prescription",
               "body": [
                 "The stronger DHT blocker, and what I run now.",
-                "I moved up from finasteride because I'm not willing to gamble with my hairline."
+                "It knocks DHT down further than finasteride and stays in your system much longer.",
+                "I moved up because I'm not willing to gamble with my hairline."
               ],
               "story": "",
               "provider": true,
@@ -78,7 +80,8 @@
               "name": "Minoxidil 5%",
               "status": "established",
               "body": [
-                "Minoxidil is key. It's the regrowth half of my routine and I don't skip it.",
+                "Minoxidil is key. The DHT blocker holds what you have, this is what grows it back.",
+                "Foam or liquid on the scalp, every day. Stop and you lose the gains, so I don't skip it.",
                 "I've also used it to grow thicker eyebrows and a fuller beard."
               ],
               "story": "",
@@ -90,7 +93,8 @@
               "name": "Ketoconazole shampoo",
               "status": "established",
               "body": [
-                "My shampoo for scalp health. Cheap, easy, and it stays in the routine."
+                "My shampoo for scalp health. A few times a week, left on for a few minutes before rinsing.",
+                "A clean, calm scalp gives everything else a better shot. Cheap and easy to keep in."
               ],
               "story": "",
               "link": "",
@@ -101,7 +105,8 @@
               "name": "Derma stamp (microneedling)",
               "status": "established",
               "body": [
-                "I pair this with minoxidil to push regrowth further."
+                "I pair this with minoxidil to push regrowth further.",
+                "About once a week on the hairline and any thin spots. Keep it clean and don't overdo it."
               ],
               "story": "",
               "link": "",
@@ -112,7 +117,8 @@
               "name": "GHK-Cu copper peptide serum",
               "status": "cosmetic",
               "body": [
-                "Copper peptide straight on the scalp. I use it for thickness."
+                "Copper peptide straight on the scalp. I use it for thickness.",
+                "An easy extra on top of the basics, not a replacement for them."
               ],
               "story": "",
               "link": "",
@@ -123,7 +129,8 @@
               "name": "GHK-Cu, injectable",
               "status": "experimental",
               "body": [
-                "Always in my stack. I run it for my hair and my skin."
+                "Always in my stack. I run it for my hair and my skin.",
+                "Copper peptides are tied to collagen and repair, which is why it covers both for me."
               ],
               "story": "",
               "icon": "syringe"
