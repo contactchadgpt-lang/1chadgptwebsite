@@ -97,8 +97,7 @@
       h('h4', { class: 'D', text: p.name }),
       p.lead ? h('p', { class: 'icard__lead mono ac', text: p.lead }) : null,
       p.photo ? photoFig(p.photo) : null
-    ].concat(paras(p.body)).concat([
-      has(p.story) ? h('div', { class: 'icard__story' }, [h('span', { class: 'mono', text: 'My personal experience' })].concat(paras(p.story))) : null,
+    ].concat(paras(p.body)).concat(paras(p.story)).concat([
       (p.status === 'prescription' && cfg.providerLink) ? h('a', { href: cfg.providerLink, target: '_blank', rel: 'noopener', class: 'ulink', text: 'Get it through a licensed provider →' }) : null,
       canShop ? shop('Shop product →', p.link, stack, p.name) : null
     ]));
