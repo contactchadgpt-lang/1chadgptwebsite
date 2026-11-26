@@ -368,3 +368,7 @@ a.tile .tile__ico svg { width: 22px; height: 22px; }
 /* before and after pair inside a card */
 .icard .mini { margin: 4px 0 6px; }
 .icard .mini__pair > div:first-child img { filter: none; }
+
+/* photo block sits above the intro, kept compact */
+.photos { grid-template-columns: minmax(0, 360px); margin: 22px 0 6px; }
+@media (max-width: 720px) { .photos { grid-template-columns: minmax(0, 300px); } }
