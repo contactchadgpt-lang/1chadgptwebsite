@@ -1,0 +1,367 @@
+{
+  "_readme": [
+    "This file is the whole site. Edit here, not in the pages.",
+    "PRODUCT (default item type): fill 'name' to make it appear. Fields: slot (what goes here), brand, name, image, desc, why (Why I rate it), price, discount, code, link (affiliate URL). Empty fields are not shown. No 'name' = hidden on the live site. No 'link' = no SHOP button.",
+    "INFO item (type 'info'): an educational breakdown. Fields: name, status (established | cosmetic | prescription | experimental), body, story, provider (true = shows the licensed-provider line), link. A SHOP button only ever shows for established or cosmetic items. No 'body' = hidden on the live site.",
+    "MY EXPERIENCE: every info item has a 'story' field. Write Chad's real experience there in his own words. Empty = not shown on the live site. Never invent one.",
+    "PROVIDER item (type 'provider'): a line pointing to a licensed medical provider or test provider. Fields: label, link. No 'link' = hidden on the live site.",
+    "Hidden items still show as grey DRAFT slots when you open the site on this computer, or anywhere with ?draft=1 on the address.",
+    "config.trackEndpoint: optional URL that receives every affiliate click as JSON. Clicks are also sent to Google Analytics or Plausible if either is installed on the page.",
+    "COPY: 'body' and 'story' can be one string or a list of paragraphs. 'lead' is a short line under the name. A stack can have 'outro': {title, lines[], fine} shown under the cards. A section 'title' can be empty.",
+    "PHOTOS: a stack can have 'photos': a list of {before, after, caption, beforeLabel, afterLabel}. A pair only shows if both image files exist. For hair, drop files into images/hair/ named before-1.jpg, after-1.jpg, before-2.jpg, after-2.jpg.",
+    "PHOTO PINS: each photo pair can have 'beforePin' and 'afterPin': {x, y, text}. x and y are percentages across and down the photo where the marker points. Change 'text' to relabel it."
+  ],
+  "config": {
+    "trackEndpoint": "",
+    "providerLink": ""
+  },
+  "stacks": [
+    {
+      "slug": "hair",
+      "name": "The Hair Stack",
+      "tagline": "Thicker, fuller hair. Keep what you've got.",
+      "inside": [
+        "Hairline preservation",
+        "Regrowth",
+        "Copper peptide",
+        "Styling arsenal"
+      ],
+      "desc": "The Norwood Reaper comes for everyone. Don't wait until your hairline is halfway across your scalp to start caring. Discover my complete hair optimization stack, covering hair preservation, thickness, volume and elite styling.",
+      "cta": "Explore The Hair Stack",
+      "photo": "images/gallery-3.jpg",
+      "pos": "50% 60%",
+      "headline": "Keep it. Thicken it. Style it.",
+      "sub": "Hold your hairline. Grow it back. Make it look good.",
+      "intro": [
+        "A full head of hair is a massive aesthetic halo.",
+        "Don't wait for the Norwood Reaper to start caring."
+      ],
+      "sections": [
+        {
+          "title": "Stop the Loss",
+          "items": [
+            {
+              "type": "info",
+              "name": "Finasteride",
+              "status": "prescription",
+              "body": "Blocks DHT, the hormone behind male pattern hair loss. Used to stop the hairline going back. Oral or topical.",
+              "story": "",
+              "provider": true
+            },
+            {
+              "type": "info",
+              "name": "Dutasteride",
+              "status": "prescription",
+              "body": "A stronger DHT blocker. The step up when finasteride isn't enough.",
+              "story": "",
+              "provider": true
+            }
+          ]
+        },
+        {
+          "title": "Regrow",
+          "items": [
+            {
+              "type": "info",
+              "name": "Minoxidil 5%",
+              "status": "established",
+              "body": "Topical foam or liquid, used to regrow and thicken hair.",
+              "story": "",
+              "link": ""
+            },
+            {
+              "type": "info",
+              "name": "Ketoconazole shampoo",
+              "status": "established",
+              "body": "Anti-dandruff shampoo, used alongside the rest for scalp health and hair.",
+              "story": "",
+              "link": ""
+            },
+            {
+              "type": "info",
+              "name": "Derma stamp (microneedling)",
+              "status": "established",
+              "body": "Used with minoxidil to push regrowth further.",
+              "story": "",
+              "link": ""
+            },
+            {
+              "type": "info",
+              "name": "GHK-Cu copper peptide serum",
+              "status": "cosmetic",
+              "body": "Copper peptide serum for the scalp, used for hair thickness.",
+              "story": "",
+              "link": ""
+            },
+            {
+              "type": "info",
+              "name": "GHK-Cu, injectable",
+              "status": "experimental",
+              "body": "Copper peptide, used for hair and skin quality.",
+              "story": ""
+            }
+          ]
+        },
+        {
+          "title": "The Styling Arsenal",
+          "note": "Having hair is one thing. Knowing what to do with it is another.",
+          "items": [
+            {
+              "type": "info",
+              "name": "Sea Salt Spray",
+              "lead": "Coming soon",
+              "body": "",
+              "story": ""
+            },
+            {
+              "type": "info",
+              "name": "Matte Clay",
+              "lead": "Coming soon",
+              "body": "",
+              "story": ""
+            }
+          ]
+        }
+      ],
+      "photos": [
+        {
+          "before": "images/hair/before-1.jpg",
+          "after": "images/hair/after-1.jpg",
+          "caption": "",
+          "beforeLabel": "Before",
+          "afterLabel": "Now",
+          "beforePin": {
+            "x": 50,
+            "y": 21,
+            "text": "Norwood 2"
+          },
+          "afterPin": {
+            "x": 50,
+            "y": 20,
+            "text": "Restored"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "skinmaxx",
+      "name": "The Skinmaxx Stack",
+      "tagline": "Clear skin. Fewer breakouts. Protect your halo.",
+      "inside": [
+        "Skin-related peptides",
+        "Anti-aging",
+        "Instant upgrades"
+      ],
+      "desc": "The last thing you want is an aesthetic physique, elite hair and fucked-up skin. From androgen-related breakouts to premature aging, your skin can make or break your halo. Discover my complete skinmaxxing stack, covering clear skin, anti-aging, skin quality, peptides and my go-to products.",
+      "cta": "Explore The Skinmaxx Stack",
+      "photo": "images/hero-bg.jpg",
+      "pos": "50% 40%",
+      "headline": "Don't let bad skin kill your halo.",
+      "sub": "Clear skin. Elite complexion. Age like a Chad.",
+      "intro": [
+        "You can have an elite physique, perfect hair and great facial structure, but don't underestimate how much your skin affects your overall appearance.",
+        "I've dealt with skin issues myself, and it's something I've spent a lot of time trying to improve throughout my looksmaxxing journey.",
+        "The goal for me is clear, healthy-looking skin, an even complexion and a natural glow without having a ridiculous 15-step skincare routine."
+      ],
+      "sections": [
+        {
+          "title": "The Peptide Stack",
+          "items": [
+            {
+              "type": "info",
+              "name": "GHK-Cu",
+              "body": [
+                "Skin quality is one of the most underrated aspects of looksmaxxing. GHK-Cu is a copper peptide that interests me because of its potential role in skin repair, collagen production and overall skin quality. Evidence for injectable use remains limited."
+              ],
+              "story": "",
+              "status": "experimental"
+            },
+            {
+              "type": "info",
+              "name": "Melanotan II",
+              "body": [
+                "I've always preferred how I look with a tan. Personally, I find that a bit of colour brings out my features, makes my eyes pop and complements a lean physique.",
+                "Melanotan II is something I've experimented with in the past. It's an unapproved tanning compound that carries significant health risks, so my experience isn't a recommendation to use it."
+              ],
+              "story": "",
+              "status": "experimental"
+            },
+            {
+              "type": "info",
+              "name": "KPV",
+              "body": [
+                "Redness, irritation and inflammation can make your complexion look significantly worse, even when the rest of your skincare routine is dialled in.",
+                "KPV is an experimental peptide being studied for its anti-inflammatory properties, although its effectiveness for treating acne hasn't been established."
+              ],
+              "story": "",
+              "status": "experimental"
+            }
+          ]
+        },
+        {
+          "title": "Anti-Aging",
+          "note": "The goal isn't just to look good now. It's to look good ten years from now.",
+          "items": [
+            {
+              "type": "info",
+              "name": "Adapalene 0.1%",
+              "body": [
+                "I've dealt with acne throughout my own looksmaxxing journey, and getting your skin under control can make a massive difference.",
+                "Adapalene is one of the more established options for managing acne and improving skin texture over time. Nothing flashy, just a legitimate skincare ingredient that doesn't need some ridiculous marketing gimmick."
+              ],
+              "story": "",
+              "status": "established",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "title": "Instant Aesthetic Upgrades",
+          "note": "Sometimes you've got a date in two hours and your skin didn't get the fucking memo.",
+          "items": [
+            {
+              "type": "info",
+              "name": "Tinted Moisturizer",
+              "body": [
+                "One of the most underrated products for men.",
+                "The goal isn't to look like you're wearing makeup. It's to even out your complexion, subtly cover imperfections and make your skin look naturally better.",
+                "Most guys wouldn't even consider using something like this, but a subtle cosmetic upgrade can make a noticeable difference."
+              ],
+              "story": "",
+              "status": "cosmetic",
+              "link": ""
+            }
+          ]
+        }
+      ],
+      "outro": {
+        "title": "Max out your complexion.",
+        "lines": [
+          "Your face is the first thing people see. Give it the same attention you give your physique."
+        ]
+      }
+    },
+    {
+      "slug": "lean-mean",
+      "name": "The Lean & Mean Stack",
+      "tagline": "Lean, chiseled, movie star physique. Not bloated.",
+      "inside": [
+        "Fat loss and body composition",
+        "Physique-related peptides"
+      ],
+      "desc": "Being 250 pounds doesn't automatically make you aesthetic. The objective isn't to become a refrigerator with arms. It's to build a lean, muscular physique with proportions that actually look good. Discover my personal stack for leanmaxxing, physique optimization, performance and recovery.",
+      "cta": "Explore The Lean & Mean Stack",
+      "photo": "images/hero.jpg",
+      "pos": "55% 22%",
+      "headline": "Build an aesthetic physique. Not a refrigerator.",
+      "sub": "Lean. Muscular. Athletic. Aesthetic.",
+      "intro": [
+        "The goal for me is the movie-star physique. Broad shoulders, a narrow waist, visible abs and a sharp fucking jawline.",
+        "I want to look good 365 days a year without making my entire existence revolve around dieting.",
+        "Over the years, I've experimented with a lot of different approaches to getting lean and maintaining my physique. These are some of the compounds I've explored along the way."
+      ],
+      "sections": [
+        {
+          "title": "",
+          "items": [
+            {
+              "type": "info",
+              "name": "Retatrutide",
+              "status": "experimental",
+              "story": "",
+              "body": [
+                "One of the biggest challenges for me when staying lean has always been the constant food noise. Thinking about your next meal 24/7 gets exhausting pretty fucking quickly.",
+                "Retatrutide is something I've personally experimented with throughout my transformation while working toward a leaner physique."
+              ]
+            },
+            {
+              "type": "info",
+              "name": "Tirzepatide",
+              "status": "prescription",
+              "provider": true,
+              "story": "",
+              "body": [
+                "I'm not interested in spending half the year bulking and the other half suffering through an aggressive cut.",
+                "I've explored tirzepatide as part of my approach to appetite management. My goal is to maintain an aesthetic physique without letting food dictate my entire life."
+              ]
+            },
+            {
+              "type": "info",
+              "name": "Tesamorelin",
+              "status": "prescription",
+              "provider": true,
+              "story": "",
+              "body": [
+                "Tesamorelin is a little different from the other compounds in this stack. Rather than suppressing appetite, it stimulates your body's natural growth hormone production.",
+                "I've experimented with it alongside retatrutide or tirzepatide because they work through different pathways. My goal has always been to get lean while maintaining as much muscle as possible."
+              ]
+            }
+          ]
+        }
+      ],
+      "outro": {
+        "title": "Stay lean. Stay muscular. Enjoy your life.",
+        "lines": [
+          "Looking good shouldn't be something you only do for six weeks of the year."
+        ]
+      }
+    },
+    {
+      "slug": "primal",
+      "name": "The Primal Stack",
+      "tagline": "Sex drive and bedroom performance.",
+      "inside": [
+        "Libido and sexual wellness",
+        "Performance-related peptides"
+      ],
+      "desc": "Looking like a Chad is only half the equation. What's the point of looking elite if you've got the energy and sex drive of a retired accountant? Discover my personal male vitality stack, covering libido, energy, performance, recovery, compounds and peptides.",
+      "cta": "Explore The Primal Stack",
+      "photo": "images/gallery-2.jpg",
+      "pos": "62% 22%",
+      "headline": "Reclaim your primal edge.",
+      "sub": "Drive. Confidence. Bedroom performance.",
+      "intro": [
+        "Every guy wants to max out his looks, but very few talk about maxing out their confidence in the bedroom.",
+        "You might think this is something you don't need. I used to think the same thing. But there's a difference between showing up and showing up the way you actually want to.",
+        "Personally, I want to give the woman I'm with an experience she'll remember. I don't want to spend half the night in my own head worrying about how I'm going to perform."
+      ],
+      "sections": [
+        {
+          "title": "",
+          "items": [
+            {
+              "type": "info",
+              "name": "Tadalafil",
+              "status": "prescription",
+              "provider": true,
+              "body": "",
+              "story": [
+                "For me, the biggest difference has been confidence. I've had nights where I haven't performed the way I wanted to, and that shit is frustrating.",
+                "Being able to get out of my own head, enjoy the moment and focus on the woman I'm with makes a massive difference to my experience."
+              ]
+            },
+            {
+              "type": "info",
+              "name": "PT-141",
+              "status": "experimental",
+              "lead": "The desire side of the equation.",
+              "body": [
+                "There's a difference between being physically ready and genuinely wanting to rip each other's clothes off.",
+                "That's what makes the subject of libido so interesting to me. It's an entirely different conversation from erection quality, and something most guys rarely discuss openly."
+              ],
+              "story": ""
+            }
+          ]
+        }
+      ],
+      "outro": {
+        "title": "The bottom line",
+        "lines": [
+          "Looking your best is one thing. Being confident when it actually matters is another.",
+          "Max out both."
+        ],
+        "fine": "Personal experiences are not guaranteed results. Prescription treatments require medical guidance."
+      }
+    }
+  ]
+}
