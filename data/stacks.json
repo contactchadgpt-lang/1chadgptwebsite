@@ -188,10 +188,13 @@
               "type": "info",
               "name": "KPV",
               "body": [
-                "Redness, irritation and inflammation can make your complexion look significantly worse.",
-                "KPV is an experimental peptide being studied for its anti-inflammatory properties, although its effectiveness for treating acne hasn't been established."
+                "Redness, irritation and inflammation can make your complexion look significantly worse."
               ],
-              "story": "",
+              "story": [
+                "I've tried a ton of things for my acne over the years. Cleansers, creams, treatments, all of it.",
+                "Nothing cleared my skin up as much as KPV, and nothing else has kept it away like this.",
+                "It's still an experimental peptide, so take this as my experience, not a promise."
+              ],
               "status": "experimental"
             }
           ]
